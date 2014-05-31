@@ -16,21 +16,34 @@
   <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <style>
+    #searchBar{
+      position:fixed;
+      top:50%;
+      left:50%;
+      width:30em;
+      height:18em;
+      margin-top:-9em;
+      margin-left:-15em;
+      text-align: center;
+    }
+  </style>
 </head>
 
 <body>
-  <div>
-    <header>
-      <h1>Search</h1>
-    </header>
+    <div id="searchBar">
+      <header>
+       <h1>Search</h1>
+      </header>    
       <p id="demo">Click the button to get your coordinates:</p>
       <button onclick="getLocation()">Try It</button>
-
-    <footer>
-     <p>&copy; Copyright  by Kenny Keating</p>
-    </footer>
-  </div>
+     </div>
+  <script src="jquery-1.11.1.min.js"></script>
    <script>
+   $("#demo").hover(function(){
+    //alert("hey"); it works. 
+   });
+
     var x = document.getElementById("demo");
     function getLocation()
   {
